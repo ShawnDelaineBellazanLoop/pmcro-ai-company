@@ -1,0 +1,7 @@
+{
+  "name": "domain-specialist",
+  "version": "1.0.0",
+  "description": "Domain Specialist — industry-specific execution for Property Preservation / Real Estate (Tooensure Recovery Services). Runs PMCR-O cycles via pmcro-loop, not its own loop.",
+  "author": { "name": "PMCR-O AI Agent Company" },
+  "category": "domain"
+}

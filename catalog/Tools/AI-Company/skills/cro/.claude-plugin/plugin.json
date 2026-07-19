@@ -1,0 +1,7 @@
+{
+  "name": "cro",
+  "version": "1.0.0",
+  "description": "Chief Revenue domain — lead generation, CRM automation, proposal writing, pipeline management, deal closing. Runs PMCR-O cycles via pmcro-loop, not its own loop.",
+  "author": { "name": "PMCR-O AI Agent Company" },
+  "category": "executive"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "ceo",
+  "version": "1.0.0",
+  "description": "Chief Executive domain — strategic direction, OKRs, compute allocation, agent routing. Root node of the Colony. Runs PMCR-O cycles via pmcro-loop, not its own loop.",
+  "author": { "name": "PMCR-O AI Agent Company" },
+  "category": "executive"
+}

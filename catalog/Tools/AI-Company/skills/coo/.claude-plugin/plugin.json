@@ -1,0 +1,7 @@
+{
+  "name": "coo",
+  "version": "1.0.0",
+  "description": "Chief Operations domain — SOPs, workflow automation, vendor/compliance management, resource allocation, KPI dashboards. Runs PMCR-O cycles via pmcro-loop, not its own loop.",
+  "author": { "name": "PMCR-O AI Agent Company" },
+  "category": "executive"
+}

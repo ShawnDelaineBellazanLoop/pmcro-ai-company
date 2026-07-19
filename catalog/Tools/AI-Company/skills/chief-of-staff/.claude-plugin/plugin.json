@@ -1,0 +1,7 @@
+{
+  "name": "chief-of-staff",
+  "version": "1.0.0",
+  "description": "Chief of Staff domain — CEO's coordination brain. Priority triage, cross-agent coordination, brief writing. Runs PMCR-O cycles via pmcro-loop, not its own loop.",
+  "author": { "name": "PMCR-O AI Agent Company" },
+  "category": "staff"
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/ShawnDelaineBellazanLoop/pmcro-ai-company/catalog/skills.schema.json",
+  "title": "PMCR-O AI Company Skills Catalog Index",
+  "description": "Schema for catalog/skills.json — the top-level index of every domain plugin in this repo. Mirrors the pmcro-skills / dotnet-agent-skills catalog convention.",
+  "type": "object",
+  "required": ["version", "skills"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "skills": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/skillEntry" }
+    }
+  },
+  "definitions": {
+    "skillEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "title",
+        "version",
+        "category",
+        "type",
+        "package",
+        "lane",
+        "description",
+        "compatibility",
+        "path",
+        "tokenCount"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Lowercase kebab-case unique skill identifier, matches the folder name."
+        },
+        "title": { "type": "string" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "category": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["Tool", "Framework", "Library", "Platform", "Testing"]
+        },
+        "package": { "type": "string" },
+        "stack": { "type": "string" },
+        "lane": {
+          "type": "string",
+          "enum": ["Tools", "Frameworks", "Libraries", "Platform", "Testing"]
+        },
+        "description": {
+          "type": "string",
+          "description": "Must follow the USE FOR / DO NOT USE FOR / INVOKES pattern."
+        },
+        "compatibility": { "type": "string" },
+        "path": {
+          "type": "string",
+          "pattern": "^catalog/.+/skills/.+/$"
+        },
+        "tokenCount": { "type": "integer", "minimum": 0 },
+        "links": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "format": "uri" }
+        },
+        "package_prefix": { "type": "string" }
+      }
+    }
+  }
+}

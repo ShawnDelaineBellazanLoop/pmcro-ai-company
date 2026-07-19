@@ -1,0 +1,7 @@
+{
+  "name": "chro",
+  "version": "1.0.0",
+  "description": "Chief People domain — hiring pipelines, onboarding, performance reviews, culture docs, training design. Runs PMCR-O cycles via pmcro-loop, not its own loop.",
+  "author": { "name": "PMCR-O AI Agent Company" },
+  "category": "executive"
+}
