@@ -1,7 +1,10 @@
 {
   "name": "cfo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Chief Financial domain — budgeting, cash flow, forecasting, cost optimization, investor reporting. Runs PMCR-O cycles via pmcro-loop, not its own loop.",
-  "author": { "name": "PMCR-O AI Agent Company" },
-  "category": "executive"
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "executive",
+  "displayName": "Chief Financial Officer"
 }

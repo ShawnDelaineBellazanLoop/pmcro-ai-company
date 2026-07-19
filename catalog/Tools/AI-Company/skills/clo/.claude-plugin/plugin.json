@@ -1,7 +1,10 @@
 {
   "name": "clo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Chief Legal domain — contract review, risk analysis, regulatory compliance, privacy, IP protection. Runs PMCR-O cycles via pmcro-loop, not its own loop.",
-  "author": { "name": "PMCR-O AI Agent Company" },
-  "category": "executive"
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "executive",
+  "displayName": "Chief Legal Officer"
 }

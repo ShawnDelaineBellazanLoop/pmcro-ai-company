@@ -11,61 +11,71 @@
       "name": "ceo",
       "source": "./catalog/Tools/AI-Company/skills/ceo",
       "description": "Chief Executive domain — strategic direction, OKRs, compute allocation, agent routing. Root node of the Colony.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief Executive Officer"
     },
     {
       "name": "chief-of-staff",
       "source": "./catalog/Tools/AI-Company/skills/chief-of-staff",
       "description": "Chief of Staff domain — priority triage, cross-agent coordination, brief writing.",
-      "category": "staff"
+      "category": "staff",
+      "displayName": "Chief of Staff"
     },
     {
       "name": "cto",
       "source": "./catalog/Tools/AI-Company/skills/cto",
       "description": "Chief Technology domain — architecture, skill pack validation, security posture, DevOps, incident response.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief Technology Officer"
     },
     {
       "name": "coo",
       "source": "./catalog/Tools/AI-Company/skills/coo",
       "description": "Chief Operations domain — SOPs, workflow automation, vendor/compliance management, resource allocation, KPI dashboards.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief Operations Officer"
     },
     {
       "name": "cfo",
       "source": "./catalog/Tools/AI-Company/skills/cfo",
       "description": "Chief Financial domain — budgeting, cash flow, forecasting, cost optimization, investor reporting.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief Financial Officer"
     },
     {
       "name": "cro",
       "source": "./catalog/Tools/AI-Company/skills/cro",
       "description": "Chief Revenue domain — lead generation, CRM automation, proposal writing, pipeline management, deal closing.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief Revenue Officer"
     },
     {
       "name": "cmo",
       "source": "./catalog/Tools/AI-Company/skills/cmo",
       "description": "Chief Marketing domain — content creation, SEO, social media, campaign management, brand voice.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief Marketing Officer"
     },
     {
       "name": "clo",
       "source": "./catalog/Tools/AI-Company/skills/clo",
       "description": "Chief Legal domain — contract review, risk analysis, regulatory compliance, privacy, IP protection.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief Legal Officer"
     },
     {
       "name": "chro",
       "source": "./catalog/Tools/AI-Company/skills/chro",
       "description": "Chief People domain — hiring pipelines, onboarding, performance reviews, culture docs, training design.",
-      "category": "executive"
+      "category": "executive",
+      "displayName": "Chief People Officer"
     },
     {
       "name": "domain-specialist",
       "source": "./catalog/Tools/AI-Company/skills/domain-specialist",
       "description": "Industry specialist — Property Preservation / Real Estate (Tooensure Recovery Services). Reports to coo.",
-      "category": "domain"
+      "category": "domain",
+      "displayName": "Domain Specialist (Property Preservation)"
     }
   ]
 }
