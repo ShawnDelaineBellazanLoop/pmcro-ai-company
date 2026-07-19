@@ -1,0 +1,10 @@
+{
+  "name": "checker",
+  "version": "1.0.0",
+  "description": "The Check role of the PMCR-O loop. Passive, composable skill: validates the current frame's make output against the plan's success criteria, this repo's schemas, and any applicable Colony law, writing NN-check.jsonl. Provides: checker. Requires: none.",
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "engine",
+  "displayName": "Checker (PMCR-O Loop)"
+}

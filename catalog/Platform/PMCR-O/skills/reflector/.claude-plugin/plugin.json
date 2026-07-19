@@ -1,0 +1,10 @@
+{
+  "name": "reflector",
+  "version": "1.0.0",
+  "description": "The Reflect role of the PMCR-O loop. Passive, composable skill: reads a sealed or looping frame's check output, crystallizes any recurring lesson into an EarnedConstraint (EC-XXX), and writes NN-reflect.jsonl. Provides: reflector. Requires: none.",
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "engine",
+  "displayName": "Reflector (PMCR-O Loop)"
+}

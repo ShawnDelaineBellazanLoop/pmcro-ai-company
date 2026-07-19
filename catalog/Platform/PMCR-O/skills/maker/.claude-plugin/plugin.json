@@ -1,0 +1,10 @@
+{
+  "name": "maker",
+  "version": "1.0.0",
+  "description": "The Make role of the PMCR-O loop. Passive, composable skill: executes the current frame's plan and writes NN-make.jsonl. Provides: maker. Requires: none (consumes whatever frame orchestrator hands it; does not decide what runs next).",
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "engine",
+  "displayName": "Maker (PMCR-O Loop)"
+}

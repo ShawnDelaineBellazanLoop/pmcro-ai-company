@@ -76,6 +76,62 @@
       "description": "Industry specialist — Property Preservation / Real Estate (Tooensure Recovery Services). Reports to coo.",
       "category": "domain",
       "displayName": "Domain Specialist (Property Preservation)"
+    },
+    {
+      "name": "orchestrator",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/orchestrator",
+      "description": "The Orchestrate role of the PMCR-O loop — owns sequencing, loop-vs-seal, and EC-009 MaxLoops enforcement. Provides: orchestrator. Requires: planner, maker, checker, reflector, dependency-resolver.",
+      "category": "engine",
+      "displayName": "Orchestrator (PMCR-O Loop)"
+    },
+    {
+      "name": "dependency-resolver",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/dependency-resolver",
+      "description": "Resolves which domain scope and PMCR-O role-skills a cycle needs via metadata.pmcro_provides/pmcro_requires. Provides: dependency-resolver.",
+      "category": "engine",
+      "displayName": "Dependency Resolver"
+    },
+    {
+      "name": "planner",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/planner",
+      "description": "The Plan role of the PMCR-O loop — passive, composable. Provides: planner.",
+      "category": "engine",
+      "displayName": "Planner (PMCR-O Loop)"
+    },
+    {
+      "name": "maker",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/maker",
+      "description": "The Make role of the PMCR-O loop — passive, composable. Provides: maker.",
+      "category": "engine",
+      "displayName": "Maker (PMCR-O Loop)"
+    },
+    {
+      "name": "checker",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/checker",
+      "description": "The Check role of the PMCR-O loop — passive, composable. Provides: checker.",
+      "category": "engine",
+      "displayName": "Checker (PMCR-O Loop)"
+    },
+    {
+      "name": "reflector",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/reflector",
+      "description": "The Reflect role of the PMCR-O loop — crystallizes EarnedConstraints. Provides: reflector.",
+      "category": "engine",
+      "displayName": "Reflector (PMCR-O Loop)"
+    },
+    {
+      "name": "skill-creator",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/skill-creator",
+      "description": "Packages new commands/agents/domains/role-skills into this repo's convention and syncs the catalog. Provides: skill-creator. Requires: dependency-resolver.",
+      "category": "engine",
+      "displayName": "Skill Creator (Colony Packaging)"
     }
   ]
 }

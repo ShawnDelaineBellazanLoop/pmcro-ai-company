@@ -1,0 +1,10 @@
+{
+  "name": "planner",
+  "version": "1.0.0",
+  "description": "The Plan role of the PMCR-O loop. Passive, composable skill: reads a cycle's true_intent plus the relevant domain's Owns/Does-Not-Own scope and produces 00-frame.json. Provides: planner. Requires: none (does not sequence itself into other roles -- orchestrator does that).",
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "engine",
+  "displayName": "Planner (PMCR-O Loop)"
+}

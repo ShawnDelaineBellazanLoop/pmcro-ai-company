@@ -1,0 +1,10 @@
+{
+  "name": "skill-creator",
+  "version": "1.0.0",
+  "description": "Packages a new command, sub-agent, or domain into this repo's catalog convention (SKILL.md frontmatter, commands/agents/references/scripts layout, provides/requires metadata) and keeps catalog/skills.json + both marketplace.json twins in sync. Provides: skill-creator. Requires: dependency-resolver.",
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "engine",
+  "displayName": "Skill Creator (Colony Packaging)"
+}

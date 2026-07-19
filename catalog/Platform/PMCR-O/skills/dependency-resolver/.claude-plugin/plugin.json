@@ -1,0 +1,10 @@
+{
+  "name": "dependency-resolver",
+  "version": "1.0.0",
+  "description": "Resolves which PMCR-O role-skills and domain scopes a cycle needs loaded, by walking each candidate skill's metadata.pmcro_provides/pmcro_requires chain. Provides: dependency-resolver. Requires: none (leaf skill, consulted by orchestrator and skill-creator before dispatch).",
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "engine",
+  "displayName": "Dependency Resolver"
+}

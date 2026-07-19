@@ -1,0 +1,10 @@
+{
+  "name": "orchestrator",
+  "version": "1.0.0",
+  "description": "The Orchestrate role of the PMCR-O loop -- the only role that owns sequencing. Decides Plan->Make->Check->Reflect ordering, loop-vs-seal, and enforces EC-009 MaxLoops. Provides: orchestrator. Requires: planner, maker, checker, reflector, dependency-resolver.",
+  "author": {
+    "name": "PMCR-O AI Agent Company"
+  },
+  "category": "engine",
+  "displayName": "Orchestrator (PMCR-O Loop)"
+}
