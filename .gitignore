@@ -427,3 +427,7 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# PMCR-O local machine config -- personal defaults (e.g. default_repo_path),
+# never a catalog-level assumption. See .agents/settings.example.json for the shape.
+.agents/settings.local.json

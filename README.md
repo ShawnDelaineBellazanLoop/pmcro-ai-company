@@ -29,16 +29,26 @@ Follows the same convention as `pmcro-skills` (itself built to the `dotnet-agent
 
 ```
 pmcro-ai-company/
+├── AGENTS.md                      # cross-tool root contract (Claude Code, Codex, etc.) -- start here
+├── COLONY.md                      # index into .agents/rules/ -- the laws themselves live there now
 ├── .claude-plugin/
 │   └── marketplace.json          # root catalog Claude Code reads to discover plugins
+├── .agents/
+│   ├── plugins/
+│   │   └── marketplace.json      # same catalog, Codex-native twin of .claude-plugin/marketplace.json
+│   ├── rules/                    # Colony laws, one file per law (numbered, see COLONY.md for the index)
+│   ├── settings.example.json     # checked in -- shows the shape, no real paths
+│   └── settings.local.json       # gitignored -- your personal machine defaults (e.g. default_repo_path)
 ├── catalog/
 │   ├── skills.json                # index (schema-validated by pmcro-skills' catalog-check)
 │   ├── skills.schema.json
 │   └── Tools/AI-Company/skills/
 │       ├── ceo/
-│       │   ├── manifest.json          # catalog metadata (version, category, packages)
-│       │   ├── .claude-plugin/plugin.json  # Marketplace packaging
-│       │   └── SKILL.md               # domain scope: Owns / Does Not Own / triggers
+│       │   ├── manifest.json                # catalog metadata (version, category, packages)
+│       │   ├── .claude-plugin/plugin.json    # Marketplace packaging
+│       │   ├── agents/                       # this domain's sub-agents (e.g. software-engineer.md)
+│       │   ├── commands/                     # this domain's parameterized commands
+│       │   └── skills/domain-scope/SKILL.md  # domain scope: Owns / Does Not Own / triggers
 │       ├── chief-of-staff/
 │       ├── cto/
 │       ├── coo/
@@ -50,6 +60,8 @@ pmcro-ai-company/
 │       └── domain-specialist/
 └── README.md
 ```
+
+See `AGENTS.md` for the short version of this layout aimed at any agent (Claude, Codex, etc.) starting cold in this repo.
 
 ## Relationship to the CopilotKit directory UI
 

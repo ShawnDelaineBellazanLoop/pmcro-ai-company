@@ -1,0 +1,5 @@
+{
+  "$comment": "Copy this file to settings.local.json (gitignored) and fill in your own machine's defaults. Never commit settings.local.json -- it is personal, not a catalog-level assumption. See COLONY.md Law 1 and .agents/rules/01-declarative-params.md for why no target path is ever hardcoded into a domain's SKILL.md or command.",
+  "default_repo_path": "",
+  "$comment_default_repo_path": "Absolute path to the target repo a command should assume when repo_path is omitted. A command must still accept an explicit repo_path argument that overrides this. If both are absent, the acting role asks -- it never silently assumes a project."
+}
