@@ -1,0 +1,7 @@
+{
+  "trail_id": "6c376163-ce75-46ed-a408-4de5f5fbe5db",
+  "domain": "chief-of-staff",
+  "true_intent": "Run /orchestrator:brief-session: walk all 10 C-Suite domains per brief-session.md's Round Table procedure, read each domain's Owns/Does-Not-Own scope and most recent trail disposition (or note dangling/no-cycles), play back Linguistic Chain of Custody hand-offs where present, and generate SESSION-BRIEF.md at repo root -- narrate only, decide nothing.",
+  "created_at": "2026-07-19T00:00:00Z",
+  "requested_by": "/orchestrator:brief-session"
+}

@@ -1,0 +1,14 @@
+{
+  "requested_by": "orchestrator",
+  "true_intent": "/orchestrator:brief-session -- run the Round Table across all 10 C-Suite domains and generate SESSION-BRIEF.md at repo root per the newly-unwound Session Brief Convention (cto/6cc3b341).",
+  "needs": ["planner", "maker", "checker", "reflector"],
+  "resolved": [
+    {"name": "planner", "version": "1.0.0", "pmcro_provides": "planner"},
+    {"name": "maker", "version": "1.0.0", "pmcro_provides": "maker"},
+    {"name": "checker", "version": "1.0.0", "pmcro_provides": "checker"},
+    {"name": "reflector", "version": "1.0.0", "pmcro_provides": "reflector"}
+  ],
+  "domain_scope_path": "catalog/Tools/AI-Company/skills/chief-of-staff/",
+  "note": "First trail ever recorded under chief-of-staff -- chosen for this cycle because chief-of-staff's own scope covers weekly brief writing and compiling a status brief across domains, which is exactly what brief-session.md does.",
+  "resolved_at": "2026-07-19T00:00:00Z"
+}
