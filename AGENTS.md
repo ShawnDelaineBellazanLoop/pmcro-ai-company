@@ -7,11 +7,15 @@ Codex CLI, following the `dotnet-agent-skills` catalog convention
 
 ## Layout
 
+- `catalog/Platform/PMCR-O/skills/` -- the PMCR-O loop itself, once: seven
+  role packages (`orchestrator`, `planner`, `maker`, `checker`, `reflector`,
+  `dependency-resolver`, `skill-creator`). No domain plugin below
+  reimplements this.
 - `catalog/Tools/AI-Company/skills/<domain>/` -- one plugin per C-Suite seat.
   Each is documentation-only: a `SKILL.md` stating that domain's Owns / Does
   Not Own boundary, plus `commands/` and `agents/`. No domain reimplements
-  the PMCR-O loop -- that lives once, in the sibling `pmcro-skills` repo's
-  `pmcro-loop` plugin.
+  the PMCR-O loop -- that lives once, in `catalog/Platform/PMCR-O/skills/`
+  above.
 - `.agents/rules/*.md` -- the Colony's organization-wide laws, indexed from
   `COLONY.md`. Read these before adding or editing any domain.
 - `.agents/settings.local.json` (gitignored, not present by default) -- your

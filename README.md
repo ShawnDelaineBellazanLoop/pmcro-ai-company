@@ -2,7 +2,7 @@
 
 PMCR‑O AI Agent Company — the C‑Suite directory for the PMCR‑O Colony, published as an Anthropic (Claude Code) plugin marketplace.
 
-This repo does **not** reimplement the PMCR‑O loop. The loop already exists, once, in [`pmcro-skills`](../pmcro-skills) as the `pmcro-loop` plugin — the single skill that gives whichever role (Planner/Maker/Checker/Reflector) the Orchestrator dispatches to its exact frame format and trail location. This repo adds the layer on top of that: **domain scope**.
+The PMCR-O loop implementation lives in this repo, once, under `catalog/Platform/PMCR-O/skills/` — seven role packages (`orchestrator`, `planner`, `maker`, `checker`, `reflector`, `dependency-resolver`, `skill-creator`) that give whichever role the Orchestrator dispatches to its exact frame format and trail location. The 10 domain plugins below add the layer on top of that: **domain scope**.
 
 ## What's here
 
@@ -42,6 +42,8 @@ pmcro-ai-company/
 ├── catalog/
 │   ├── skills.json                # index (schema-validated by pmcro-skills' catalog-check)
 │   ├── skills.schema.json
+│   ├── Platform/PMCR-O/skills/     # the loop itself: orchestrator, planner, maker,
+│   │                               # checker, reflector, dependency-resolver, skill-creator
 │   └── Tools/AI-Company/skills/
 │       ├── ceo/
 │       │   ├── manifest.json                # catalog metadata (version, category, packages)
