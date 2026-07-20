@@ -1,0 +1,17 @@
+{
+  "requested_by": "orchestrator",
+  "true_intent": "Unwind .agents/memory-bank/ (Cline Memory Bank pattern, built in 883b4d8 without ever going through /ceo:approve-initiative, contradicting cto/clo's not-recommended finding in ceo/4cf2171d proposal-1). Replace brief-session.md's Memory Bank Convention section with the originally-proposed alternative: a generated SESSION-BRIEF.md derived from sealed .pmcro/trails/ data, zero hand-maintained duplication.",
+  "needs": ["planner", "maker", "checker", "reflector"],
+  "resolved": [
+    {"name": "planner", "version": "1.0.0", "pmcro_provides": "planner"},
+    {"name": "maker", "version": "1.0.0", "pmcro_provides": "maker"},
+    {"name": "checker", "version": "1.0.0", "pmcro_provides": "checker"},
+    {"name": "reflector", "version": "1.0.0", "pmcro_provides": "reflector"}
+  ],
+  "domain_scope_path": "catalog/Tools/AI-Company/skills/cto/",
+  "related_trails": [
+    "ceo/4cf2171d-4600-46a8-84bf-93939bc26aaa proposal-1-clinerules.md -- original cto/clo objection and SESSION-BRIEF.md alternative, now being implemented",
+    "ceo/fe7be6ff-bb92-48a9-ac93-c7ed686e2161 reflect.jsonl -- flagged this as an open item"
+  ],
+  "resolved_at": "2026-07-19T00:00:00Z"
+}

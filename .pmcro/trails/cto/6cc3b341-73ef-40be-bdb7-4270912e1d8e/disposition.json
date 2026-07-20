@@ -1,0 +1,7 @@
+{
+  "trail_id": "6cc3b341-73ef-40be-bdb7-4270912e1d8e",
+  "sealed_at": "2026-07-19T00:00:00Z",
+  "final_cycle": "01",
+  "disposition": "needs-approval",
+  "reason": "Checker passed cleanly, handoff_verified: true, but this cycle deleted committed files (.agents/memory-bank/, from 883b4d8) and edited catalog/brief-session.md -- per hil-gating.md that forces needs-approval regardless of check outcome. Unwind implements the human-selected recommendation: delete the Cline Memory Bank pattern, replace with the SESSION-BRIEF.md alternative already specified in ceo/4cf2171d's proposal-1-clinerules.md. Not yet committed. Two unrelated pre-existing working-tree changes (repo-dump.txt deletion, repo-dump-fresh.txt) explicitly excluded from this cycle's scope."
+}

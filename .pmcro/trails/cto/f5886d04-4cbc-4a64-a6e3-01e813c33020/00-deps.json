@@ -1,0 +1,14 @@
+{
+  "requested_by": "orchestrator",
+  "true_intent": "Close out abandoned trail cto/ddec42d1-9898-43ed-9bdd-52fa87f26cc2 (00-deps.json only, no frame.json ever written -- per .clinerules Article 1, never actually 'active'). Assess whether its original three-item intent (path hardening in orchestrator-role/SKILL.md, Linguistic Hand-off mandate, brief-session.md Round Table player) still needs doing or was superseded by later work.",
+  "needs": ["planner", "maker", "checker", "reflector"],
+  "resolved": [
+    {"name": "planner", "version": "1.0.0", "pmcro_provides": "planner"},
+    {"name": "maker", "version": "1.0.0", "pmcro_provides": "maker"},
+    {"name": "checker", "version": "1.0.0", "pmcro_provides": "checker"},
+    {"name": "reflector", "version": "1.0.0", "pmcro_provides": "reflector"}
+  ],
+  "domain_scope_path": "catalog/Tools/AI-Company/skills/cto/",
+  "target_trail": "cto/ddec42d1-9898-43ed-9bdd-52fa87f26cc2 (00-deps.json only, untracked in git, never sealed)",
+  "resolved_at": "2026-07-19T00:00:00Z"
+}

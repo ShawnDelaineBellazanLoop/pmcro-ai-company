@@ -1,5 +1,5 @@
 ---
-description: "Hydrate a new session with a Persona-Aware 'Round Table' briefing across the Colony's C-Suite domains, then read/update the repo's Memory Bank so context survives across sessions. Usage: /orchestrator:brief-session"
+description: "Hydrate a new session with a Persona-Aware 'Round Table' briefing across the Colony's C-Suite domains, then generate SESSION-BRIEF.md from that pass so context survives across sessions. Usage: /orchestrator:brief-session"
 ---
 ```
 repo_path: <resolved per Law 1, .agents/rules/01-declarative-params.md>
@@ -52,54 +52,53 @@ guessing a status to fill the round table's turn.
    that authority stays with `orchestrator-role`. This command narrates
    state; it does not act on it.
 
-## Memory Bank Convention
+## Session Brief Convention
 
-This repo has no prior Memory Bank convention, so this command establishes
-one rather than inventing an ad hoc format per session. It follows the
-Cline/Roo-Code Memory Bank pattern (chosen for continuity with this
-Colony's own lineage through the earlier `pmcro-cline` project), stored
-under `.agents/memory-bank/` -- a sibling to the existing `.agents/rules/`
-and `.agents/plugins/`, per `COLONY.md`'s own layering table.
+An earlier version of this command used a Cline/Roo-Code-style Memory Bank
+(`.agents/memory-bank/`, six hand-maintained files). That was unwound --
+see `.pmcro/trails/cto/6cc3b341-73ef-40be-bdb7-4270912e1d8e` -- because
+cto/clo had already flagged the pattern not-recommended in
+`ceo/4cf2171d-4600-46a8-84bf-93939bc26aaa/proposal-1-clinerules.md` before
+it was ever built: this repo has no Cline footprint, and running a second,
+freeform persistence store alongside `.pmcro/trails/` is an architectural
+fork that can drift out of sync with the sealed record it's supposedly
+summarizing.
 
-Core files (create on first run if absent; never delete):
+This command now generates a single `SESSION-BRIEF.md` at `repo_path`
+root instead -- the alternative that same proposal already specified.
+Fully overwritten every run, never hand-edited, nothing to keep in sync
+manually:
 
-- `projectbrief.md` -- what this Colony is, in a few durable sentences.
-  Written once, edited rarely; this command does not rewrite it.
-- `productContext.md` -- why the Colony exists, what problem it solves.
-  Same low-churn treatment as `projectbrief.md`.
-- `systemPatterns.md` -- architecture and key decisions (PMCR-O loop,
-  TYPE1/TYPE2 boundary, sealed-trail-as-product). Updated only when a
-  cycle's Reflector crystallizes something structural, not every session.
-- `techContext.md` -- stack, tooling, known environment quirks (e.g. the
-  local Filesystem MCP's known timeout-under-load behavior noted in
-  `seal-trail.md`). Updated when the environment itself changes.
-- `activeContext.md` -- **this command's primary write target.** Current
-  focus, what changed this session, immediate next steps. Fully
-  overwritten each `brief-session` run -- it is a snapshot, not a log.
-- `progress.md` -- what works (backed by an ACCEPT-disposition trail,
-  never a build success or self-report alone), what's left, known open
-  hypotheses pulled from recent `reflect.jsonl` entries across domains.
-  Appended to, not overwritten, so history of "what used to be open" is
-  preserved.
+- Derived entirely from this run's Round Table pass (Step "The Round
+  Table" above) -- each domain's Owns/Does-Not-Own one-liner, its most
+  recent trail's disposition, and any hand-off addressing found per
+  Article 4 of `.clinerules`.
+- No separate read step: the Round Table's own findings *are* the
+  source, written out once at the end rather than accumulated in a
+  parallel file across sessions.
+- A domain with no trails yet writes "no cycles run yet"; a domain with a
+  dangling trail (no `disposition.json`) writes "dangling" -- same
+  EC-VERIFY-FIRST-001 discipline as the Round Table itself, not a softer
+  summary version of it.
 
-At the start of a `brief-session` run: read all six files if present (skip
-silently, do not error, if this is the first run and none exist yet -- the
-Round Table itself still runs from trail data, the Memory Bank is a cache
-of it, not its source of truth). At the end: write `activeContext.md`
-(overwrite) and append to `progress.md`, both derived from what the Round
-Table actually found on disk this run, not from what a prior
-`activeContext.md` already claimed -- EC-VERIFY-FIRST-001 applies to
-reading the Memory Bank's own prior state too.
+A fresh session reads `SESSION-BRIEF.md` for a fast catch-up, but it is a
+cache of `.pmcro/trails/`, never a substitute source of truth for it --
+if the file and the trails ever disagree, the trails win and the file is
+stale until the next `brief-session` run regenerates it.
 
 ## What Not To Do
 
-- Do not treat a stale `activeContext.md` as authoritative over what
-  `.pmcro/trails/` actually shows on this run -- the trails are the
-  sealed record; the Memory Bank is a convenience cache derived from them.
-- Do not report a domain's feature as "working" in `progress.md` on the
-  strength of this session's conversation alone -- only an
+- Do not treat a stale `SESSION-BRIEF.md` as authoritative over what
+  `.pmcro/trails/` actually shows on this run -- regenerate, don't trust
+  the last run's snapshot.
+- Do not report a domain's feature as "working" in `SESSION-BRIEF.md` on
+  the strength of this session's conversation alone -- only an
   ACCEPT-disposition trail earns that line, per this Colony's own
   verification discipline.
 - Do not let the Round Table's persona voice become a substitute for the
   underlying trail data -- if a domain's last trail sealed
   `needs-revision`, its turn says that, not something softer.
+- Do not resurrect a hand-maintained `memory-bank/`-style convention for
+  this command without a new `/ceo:approve-initiative` cycle -- it was
+  unwound once already for a documented architectural reason, not
+  removed by accident.
