@@ -40,3 +40,13 @@ put it in your own `.agents/settings.local.json` instead.
 `catalog/skills.json` and `catalog/skills.schema.json` are copies of the
 `pmcro-skills` convention, so `pmcro-skills`' `catalog-check` skill can
 validate this repo's index unmodified.
+
+## Startup Protocol
+
+Before proposing any code change in this repo, read
+`.agents/plugins/marketplace.json` (the Codex-native twin) to confirm the
+current plugin roster and versions. Do not assume the roster from memory
+or a prior session -- this file is the live source of truth and may have
+changed since you last read it. (Claude Code sessions: read `CLAUDE.md`'s
+Startup Protocol instead, which points at the Claude-native twin,
+`.claude-plugin/marketplace.json`.)

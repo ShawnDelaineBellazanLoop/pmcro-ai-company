@@ -1,0 +1,7 @@
+{
+  "trail_id": "4cf2171d-4600-46a8-84bf-93939bc26aaa",
+  "domain": "ceo",
+  "true_intent": "Evolve the Colony to close the following capability gap: Install C-10 Integration -- 1) create .clinerules using the 2026 'Memory Bank' pattern for session persistence; 2) create CLAUDE.md as a high-level router mapping slash-commands to the 10 domain plugins; 3) add a mandatory Startup Protocol requiring the agent to read .agents/plugins/marketplace.json before proposing any code changes.",
+  "created_at": "2026-07-19T00:00:00Z",
+  "requested_by": "/ceo:evolve-colony"
+}
