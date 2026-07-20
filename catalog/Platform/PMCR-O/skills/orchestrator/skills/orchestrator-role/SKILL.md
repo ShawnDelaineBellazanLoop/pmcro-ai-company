@@ -53,15 +53,16 @@ compatible. Do not skip this even when the answer seems obvious -- a stale
 or renamed domain path fails loudly here, not silently three roles later.
 Write dependency-resolver's returned resolution to `00-deps.json` at the
 trail root before creating `00-frame.json` -- this is what makes step 1
-checkable rather than assumed; see `../../references/trail-schema.md`.
+checkable rather than assumed; see
+`catalog/Platform/PMCR-O/skills/orchestrator/references/trail-schema.md`.
 
 ### 2. Create the trail
 
-Generate a fresh UUID (`scripts/new_trail_id.py`, python3 -- see
-`../../scripts/` at the orchestrator package root) and create
-`.pmcro/trails/<domain>/<uuid>/` at `repo_path`. See
-`../../references/trail-schema.md` for the exact frame/file layout before
-writing anything.
+Generate a fresh UUID (python3 `uuid.uuid4()`, via
+`catalog/Platform/PMCR-O/skills/orchestrator/scripts/new_trail_id.py`) and
+create `.pmcro/trails/<domain>/<uuid>/` at `repo_path`. See
+`catalog/Platform/PMCR-O/skills/orchestrator/references/trail-schema.md`
+for the exact frame/file layout before writing anything.
 
 ### 3. Plan -> Make -> Check -> Reflect
 
@@ -73,7 +74,7 @@ previous role's output file:
 3. **checker** reads the frame + make, writes `01-check.jsonl`
 4. **reflector** reads the frame + check, writes `01-reflect.jsonl` --
    including crystallizing an EarnedConstraint if a pattern recurs 3+ times
-   (see `../../references/earned-constraints.md`)
+   (see `catalog/Platform/PMCR-O/skills/orchestrator/references/earned-constraints.md`)
 
 Never invoke a role out of this order, and never let a later role's output
 overwrite an earlier one's file in place -- each cycle number gets its own
@@ -90,7 +91,8 @@ closes the gap, seal:
 - Write `disposition.json` at the trail root with one of:
   `accept` | `needs-approval` | `reject` | `needs-revision`
 - `accept` is only valid for cycles that touched nothing requiring HIL
-  (see `../../references/hil-gating.md` for the TYPE1/TYPE2 boundary).
+  (see `catalog/Platform/PMCR-O/skills/orchestrator/references/hil-gating.md`
+  for the TYPE1/TYPE2 boundary).
   Any cycle that wrote to `catalog/`, `marketplace.json`, or another
   domain's `SKILL.md` seals `needs-approval` regardless of how clean the
   check passed -- that gate is not this skill's to waive.
@@ -100,19 +102,20 @@ closes the gap, seal:
 Never loop unboundedly. The Colony's standing constraint is
 **EC-009: MaxLoops = 3** per domain-scoped cycle. If cycle 3 still hasn't
 produced a Checker pass, seal `needs-revision` and stop -- do not attempt a
-4th pass silently. See `../../references/earned-constraints.md` for the
-full EC registry and how to raise this ceiling deliberately (never by just
-looping past it).
+4th pass silently. See
+`catalog/Platform/PMCR-O/skills/orchestrator/references/earned-constraints.md`
+for the full EC registry and how to raise this ceiling deliberately (never
+by just looping past it).
 
 ## Multi-Turn Evolution Work
 
 Some cycles (e.g. scaffolding a full new domain plugin) genuinely need more
 sustained iteration than a single-session Plan/Make/Check/Reflect pass
 comfortably holds. For that shape of work, see
-`../../references/ralph-loop-mechanics.md` -- it re-implements the bounded
-persistent-iteration pattern using Claude Code's native `/goal` command
-rather than the community `ralph-loop`/`ralph-wiggum` plugin, and still
-respects EC-009's cap.
+`catalog/Platform/PMCR-O/skills/orchestrator/references/ralph-loop-mechanics.md`
+-- it re-implements the bounded persistent-iteration pattern using Claude
+Code's native `/goal` command rather than the community
+`ralph-loop`/`ralph-wiggum` plugin, and still respects EC-009's cap.
 
 ## Reference Files
 
