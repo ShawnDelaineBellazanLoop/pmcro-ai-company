@@ -1,0 +1,22 @@
+{
+  "requested_by": "orchestrator",
+  "true_intent": "Colony Constitution & Linguistic Protocol: (1) formally supersede parked .clinerules proposal in ceo/4cf2171d and repurpose as Colony Constitution, (2) create root-level .clinerules forbidding TYPE1/TYPE2 actions without an active trail, (3) update orchestrator-role/SKILL.md to require Linguistic Hand-offs for PASS disposition, (4) finalize brief-session.md to play back hand-offs in Round Table dialogue",
+  "needs": ["planner", "maker", "checker", "reflector"],
+  "resolved": [
+    {"name": "planner", "version": "1.0.0", "pmcro_provides": "planner"},
+    {"name": "maker", "version": "1.0.0", "pmcro_provides": "maker"},
+    {"name": "checker", "version": "1.0.0", "pmcro_provides": "checker"},
+    {"name": "reflector", "version": "1.0.0", "pmcro_provides": "reflector"}
+  ],
+  "domain_scope_path": "catalog/Tools/AI-Company/skills/ceo/",
+  "related_trails": [
+    "ceo/4cf2171d-4600-46a8-84bf-93939bc26aaa (proposal-1-clinerules.md, disposition: needs-approval, never approved -- this trail formally supersedes it)"
+  ],
+  "abandoned_trails_noted": [
+    "cto/ddec42d1-9898-43ed-9bdd-52fa87f26cc2 (00-deps.json only, no frame/plan written -- superseded by this cycle, recommend cleanup)"
+  ],
+  "type1_surface_flagged": [
+    "orchestrator-role/SKILL.md is under catalog/ -- any edit forces this cycle's disposition to needs-approval per orchestrator-role's own step 4 and hil-gating.md, regardless of Checker outcome"
+  ],
+  "resolved_at": "2026-07-19T00:00:00Z"
+}

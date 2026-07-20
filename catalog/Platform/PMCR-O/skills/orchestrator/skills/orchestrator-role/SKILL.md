@@ -80,6 +80,15 @@ Never invoke a role out of this order, and never let a later role's output
 overwrite an earlier one's file in place -- each cycle number gets its own
 `NN-*.jsonl` set, per the trail schema.
 
+**Linguistic Chain of Custody (Article 4, `.clinerules`):** each role's
+first `NN-*.jsonl` line must address the role that handed off to it by
+name (Maker's first line addresses Planner, Checker's addresses Maker,
+Reflector's addresses Checker). Checker verifies this as part of its own
+pass and sets `handoff_verified: true|false` on its final disposition
+line. A cycle cannot seal a `PASS` disposition with `handoff_verified:
+false` -- missing hand-off addressing is a check failure like any other,
+not a stylistic nicety Checker may waive.
+
 ### 4. Decide: loop or seal
 
 Read the cycle's `01-check.jsonl` disposition. If Checker flagged a failure

@@ -86,8 +86,12 @@ Minimum shape per line (roles add role-specific fields on top):
 and `reflector` read:
 
 ```json
-{"cycle": "NN", "seq": "final", "role": "check", "disposition": "pass|fail", "failing_ids": ["<seq of failing findings, if fail>"]}
+{"cycle": "NN", "seq": "final", "role": "check", "disposition": "pass|fail", "failing_ids": ["<seq of failing findings, if fail>"], "handoff_verified": true}
 ```
+
+`handoff_verified` is set by Checker per Article 4 of `.clinerules` (the
+Colony Constitution) -- `false` forces `disposition: "fail"` regardless
+of what else passed.
 
 ## disposition.json
 

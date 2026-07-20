@@ -39,6 +39,13 @@ guessing a status to fill the round table's turn.
      orchestrator-role/SKILL.md path cleanup. Nothing open."` A persona
      line is not license to invent a status the trail doesn't support;
      the voice is stylistic, the content is EC-VERIFY-FIRST-001-checked.
+   - If the trail's `01-*.jsonl` files carry Linguistic Chain of Custody
+     addressing (Article 4, `.clinerules`), play back that hand-off
+     verbatim as part of the turn -- e.g. `cto: "Maker, picking up your
+     path-cleanup pass -- Checker confirmed clean."` -- rather than only
+     summarizing frame.json + disposition.json. If a trail predates
+     Article 4 and has no addressing lines, say so ("no hand-off record
+     -- pre-dates the Linguistic Protocol") instead of fabricating one.
    - If a domain has no trails yet, its turn is simply "no cycles run
      yet" -- do not fabricate history to give it something to say.
 3. Do not let the Round Table decide anything (loop, seal, dispatch) --

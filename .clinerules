@@ -1,0 +1,81 @@
+# Colony Constitution
+
+Status: staged, `needs-approval` -- see
+`.pmcro/trails/ceo/fe7be6ff-bb92-48a9-ac93-c7ed686e2161/disposition.json`.
+Not yet ratified. Do not treat as binding until `/ceo:approve-initiative`
+accepts it.
+
+## What This File Is (and Is Not)
+
+This is the Colony's constitution: the standing rule that governs how any
+agent -- human-directed or autonomous -- may act inside this repo. It is
+**not** a Cline Memory Bank. An earlier proposal to use this filename for
+Cline session-persistence (`ceo/4cf2171d-4600-46a8-84bf-93939bc26aaa`,
+`proposal-1-clinerules.md`) was reviewed by cto/clo and marked not
+recommended -- that objection stands. This file repurposes the name for an
+unrelated, narrower purpose by explicit CEO direction; see
+`ceo/4cf2171d-.../SUPERSEDED-BY.md` for the full history.
+
+## Article 1 -- No Action Without a Trail
+
+No agent may execute a TYPE1 or TYPE2 tool action against this repo
+without an active trail: a UUID directory already created under
+`.pmcro/trails/<domain>/<uuid>/` for the work being performed, per
+`catalog/Platform/PMCR-O/skills/orchestrator/references/trail-schema.md`.
+
+"Active" means: `00-deps.json` and `00-frame.json` exist for the trail
+before any Make-phase tool call runs. A tool call with no corresponding
+open trail is a violation of this article, regardless of how small the
+action or how confident the agent is in the outcome.
+
+## Article 2 -- The TYPE1/TYPE2 Boundary Is Not Renegotiable Per-Cycle
+
+The boundary is defined once, in
+`catalog/Platform/PMCR-O/skills/orchestrator/references/hil-gating.md`,
+and applies uniformly:
+
+- **TYPE2** (reads, builds, planning, checking, reflecting) -- auto-approved,
+  still requires an open trail per Article 1, does not require a human
+  checkpoint before execution.
+- **TYPE1** (git commit/push, live edits to `catalog/skills.json` or a
+  `marketplace.json` twin, editing another domain's `SKILL.md`, renaming
+  or removing a published plugin entry) -- requires a Human-In-the-Loop
+  checkpoint *before* execution, not merely before the trail seals.
+
+No domain, no cycle, no `/ceo:evolve-colony` run may waive this for
+itself. This includes the `ceo` domain. `EC-002` (Single Dispatcher),
+`MAAI-001`, and `ARCH-TERM-HIL-001` are the law anchors; this article
+restates them, it does not amend them.
+
+## Article 3 -- Sealed Trails Are Immutable
+
+A trail with a written `disposition.json` is closed. Later corrections are
+new trails that reference the old one -- never edits to a sealed trail's
+files. `SUPERSEDED-BY.md`-style addenda are the only permitted addition to
+an already-sealed trail directory, and only to record that a later trail
+overrides it -- never to alter what the sealed trail itself concluded.
+
+## Article 4 -- Linguistic Chain of Custody
+
+Every `NN-plan.jsonl` / `NN-make.jsonl` / `NN-check.jsonl` /
+`NN-reflect.jsonl` entry's first line addresses the role that handed off
+to it by name (e.g. a Maker entry opens by addressing Planner, a Checker
+entry opens by addressing Maker). This is not decorative: it is what
+`brief-session.md`'s Round Table plays back, and Checker treats a missing
+hand-off address as a check failure per
+`orchestrator-role/SKILL.md` step 3. See that file for the exact
+enforcement mechanism.
+
+## Article 5 -- Verification Before Report
+
+No role reports a status ("working," "done," "sealed accept") on the
+strength of its own say-so. `progress.md` entries require a trail with an
+`accept` disposition behind them. A Round Table turn for a domain with no
+`disposition.json` says "dangling," not a guessed status. This restates
+`EC-VERIFY-FIRST-001`, already in force via `brief-session.md`.
+
+## Ratification
+
+This Constitution takes effect only once its own trail
+(`ceo/fe7be6ff-bb92-48a9-ac93-c7ed686e2161`) is approved via
+`/ceo:approve-initiative` -- it cannot self-ratify, per Article 2.
