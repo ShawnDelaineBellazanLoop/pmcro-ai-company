@@ -44,6 +44,7 @@ dispatched) knows this domain's Owns/Does-Not-Own boundary before writing
 - "what should the colony prioritize" / "set direction for X"
 - "approve this initiative" / "allocate compute to Y"
 - A cycle's true_intent spans multiple C-Suite domains and needs a routing call
+- "evolve the colony" / a capability gap needs a new command, sub-agent, or domain
 
 ## Example Requests
 - "Define this quarter's OKRs for the colony."

@@ -35,7 +35,7 @@ to weigh in depends on what the gap actually is:
   `commands/` vs `agents/` split, `provides`/`requires` metadata)?
 - **`clo`** -- domain-boundary check per Law 4: does this cross an existing
   domain's Owns/Does-Not-Own line, or invent authority nobody granted it?
-- **`skill-creator`** (sibling `pmcro-skills` repo) -- actual package
+- **`skill-creator`** -- actual package
   generation. This command never reimplements packaging here, same
   non-duplication rule that keeps `pmcro-loop` a single implementation.
 

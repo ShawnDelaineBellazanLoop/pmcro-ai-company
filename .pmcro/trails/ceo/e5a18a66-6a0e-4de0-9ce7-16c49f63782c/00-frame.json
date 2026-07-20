@@ -1,0 +1,7 @@
+{
+  "trail_id": "e5a18a66-6a0e-4de0-9ce7-16c49f63782c",
+  "domain": "ceo",
+  "true_intent": "Approve or reject the following cross-domain initiative: apply both proposals staged in trail ceo/e5e3107f-17d3-4260-abca-06b3efec5c57 (proposed-dependency-resolver-hardening.md and proposed-EC-010.md) to the live Platform files they target.",
+  "created_at": "2026-07-20T01:45:00Z",
+  "requested_by": "/ceo:approve-initiative"
+}

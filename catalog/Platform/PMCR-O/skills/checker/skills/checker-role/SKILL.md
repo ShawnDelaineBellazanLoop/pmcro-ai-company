@@ -35,12 +35,19 @@ make: <path to NN-make.jsonl>
    `marketplace.json`, note that Claude Code's own `claude plugin validate`
    CLI checks a different surface than that schema and both should pass;
    flag if only one was actually run.
-3. **Law-conformance** -- re-read
+3. **Dependency-resolution-recorded** -- confirm `00-deps.json` exists at
+   the trail root and its `resolved` list actually matches the role-skills
+   this cycle dispatched (`planner`/`maker`/`checker`/`reflector`, plus
+   anything the domain's evolve-colony-shaped dispatch required, e.g.
+   `cto`/`clo`/`skill-creator`). Missing file or a mismatch between
+   `resolved` and what actually ran is a finding against `orchestrator`,
+   not a pass with a note.
+4. **Law-conformance** -- re-read
    `../../../../../../../.agents/rules/` (Laws 1-4) against what Make
    actually did, not what the plan said it would do. A plan that looked
    compliant can still produce output that crosses a domain boundary in
    practice.
-4. **HIL-boundary conformance** -- confirm any TYPE1 action Maker took had
+5. **HIL-boundary conformance** -- confirm any TYPE1 action Maker took had
    the gate `../../../orchestrator/references/hil-gating.md` requires, not
    just a plan step authorizing it.
 

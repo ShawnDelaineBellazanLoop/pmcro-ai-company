@@ -42,6 +42,21 @@ seed directly rather than wait for a pattern to repeat:
    constraints are additive, same immutability principle as a sealed
    trail.
 
+## Crystallized Constraints
+
+```
+EC-010: A doc-staleness cleanup is not complete until grep-verified across
+  the whole repo, not just the files a review pass happened to open.
+  Resolves: partial cleanups that fix some instances of a stale
+  cross-repo reference (e.g. "sibling pmcro-skills repo") while leaving
+  others, creating repeated rediscovery of the same finding.
+  Raised: reflector-crystallized, trail ceo/e5e3107f-17d3-4260-abca-06b3efec5c57,
+  2026-07-20. Occurrence count: 5 (3 fixed in a prior session -- README.md,
+  AGENTS.md, .agents/rules/02-pmcro-cycle-discipline.md; 2 found unfixed in
+  this trail -- cto/skills/domain-scope/SKILL.md,
+  ceo/commands/evolve-colony.md).
+```
+
 ## How Checker Uses This Registry
 
 Every `checker` invocation's step 3 (Law-conformance) also checks against

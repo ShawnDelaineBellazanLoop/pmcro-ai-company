@@ -8,6 +8,7 @@ dispatch from `orchestrator` writes here.
 
 ```
 <repo_path>/.pmcro/trails/<domain>/<uuid>/
+├── 00-deps.json            # written once, by orchestrator, cycle 01 step 1
 ├── 00-frame.json          # written once, by planner, cycle 01 only
 ├── 01-plan.jsonl
 ├── 01-make.jsonl
@@ -26,6 +27,28 @@ dispatch from `orchestrator` writes here.
 
 `<uuid>` is generated fresh per trail via `scripts/new_trail_id.py`
 (python3, `uuid.uuid4()`) -- never reused, never hand-typed.
+
+## 00-deps.json
+
+Written once, by `orchestrator`, immediately after step 1 (Resolve
+dependencies), before the trail's frame. Records dependency-resolver's
+actual output so later roles -- especially checker -- can verify resolution
+happened and verify what it returned, rather than trusting it happened.
+
+```json
+{
+  "requested_by": "orchestrator",
+  "needs": ["planner", "maker", "checker", "reflector"],
+  "resolved": [
+    {"name": "planner", "version": "1.0.0", "pmcro_provides": "planner"},
+    {"name": "maker", "version": "1.0.0", "pmcro_provides": "maker"},
+    {"name": "checker", "version": "1.0.0", "pmcro_provides": "checker"},
+    {"name": "reflector", "version": "1.0.0", "pmcro_provides": "reflector"}
+  ],
+  "domain_scope_path": "<path to the target domain's domain-scope/SKILL.md>",
+  "resolved_at": "<ISO 8601>"
+}
+```
 
 ## 00-frame.json
 

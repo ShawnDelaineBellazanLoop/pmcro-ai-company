@@ -1,6 +1,6 @@
 ---
 name: cto
-description: "USE FOR: domain scope on technical architecture, PMCR-O loop/skill-pack design and validation, security posture, DevOps pipelines, and incident response, for whatever target repo a cycle names. Consult this whenever a cycle's true_intent concerns a service architecture, a new skill/plugin's structure, a tool's permission surface, or a post-incident analysis. DO NOT USE FOR: running a PMCR-O cycle -- that's pmcro-loop (in pmcro-skills), dispatched with this domain as scope. DO NOT USE FOR: budget approval (cfo), hiring (chro), or contract/IP terms (clo) -- CTO owns the technical work, not its funding, staffing, or legal terms."
+description: "USE FOR: domain scope on technical architecture, PMCR-O loop/skill-pack design and validation, security posture, DevOps pipelines, and incident response, for whatever target repo a cycle names. Consult this whenever a cycle's true_intent concerns a service architecture, a new skill/plugin's structure, a tool's permission surface, or a post-incident analysis. DO NOT USE FOR: running a PMCR-O cycle -- that's pmcro-loop, dispatched with this domain as scope. DO NOT USE FOR: budget approval (cfo), hiring (chro), or contract/IP terms (clo) -- CTO owns the technical work, not its funding, staffing, or legal terms."
 compatibility: "No runtime dependency. Documentation-only domain scope, read by whichever role pmcro-loop dispatches to when a cycle's true_intent falls under this domain."
 ---
 

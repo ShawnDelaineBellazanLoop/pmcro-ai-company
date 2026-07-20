@@ -1,0 +1,7 @@
+{
+  "trail_id": "e5e3107f-17d3-4260-abca-06b3efec5c57",
+  "sealed_at": "2026-07-20T01:22:49Z",
+  "final_cycle": "01",
+  "disposition": "needs-approval",
+  "reason": "evolve-colony.md step 4 seals needs-approval unconditionally for every self-evolution cycle, regardless of check outcome. Checker passed cleanly. Two proposals staged in this trail, neither applied to a live file: (1) proposed-dependency-resolver-hardening.md -- adds 00-deps.json as an explicit trail artifact plus matching checker check, closing the stated capability gap; (2) proposed-EC-010.md -- crystallizes a recurring doc-staleness pattern found while reviewing this gap. Both await /ceo:approve-initiative."
+}

@@ -46,6 +46,9 @@ Before dispatching Planner, invoke `dependency-resolver` with this cycle's
 scope, and confirms `planner`/`maker`/`checker`/`reflector` are present and
 compatible. Do not skip this even when the answer seems obvious -- a stale
 or renamed domain path fails loudly here, not silently three roles later.
+Write dependency-resolver's returned resolution to `00-deps.json` at the
+trail root before creating `00-frame.json` -- this is what makes step 1
+checkable rather than assumed; see `../../references/trail-schema.md`.
 
 ### 2. Create the trail
 

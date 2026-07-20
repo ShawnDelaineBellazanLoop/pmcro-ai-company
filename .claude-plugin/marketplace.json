@@ -5,7 +5,7 @@
     "name": "PMCR-O AI Agent Company",
     "email": "shawn2024bellazan@gmail.com"
   },
-  "description": "PMCR-O AI Agent Company C-Suite directory — 10 domain-scope plugins (CEO, Chief of Staff, CTO, COO, CFO, CRO, CMO, CLO, CHRO, Domain Specialist) built to the dotnet-agent-skills convention. Each domain is documentation-only scope, consulted by pmcro-loop (in pmcro-skills) when a cycle's true_intent falls under it -- no domain reimplements the PMCR-O loop itself.",
+  "description": "PMCR-O AI Agent Company C-Suite directory — 10 domain-scope plugins (CEO, Chief of Staff, CTO, COO, CFO, CRO, CMO, CLO, CHRO, Domain Specialist) built to the dotnet-agent-skills convention. Each domain is documentation-only scope, consulted by pmcro-loop when a cycle's true_intent falls under it -- no domain reimplements the PMCR-O loop itself.",
   "plugins": [
     {
       "name": "ceo",
