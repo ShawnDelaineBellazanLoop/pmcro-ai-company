@@ -1,0 +1,12 @@
+{
+  "requested_by": "orchestrator",
+  "needs": ["planner", "maker", "checker", "reflector"],
+  "resolved": [
+    {"name": "planner", "version": "1.0.0", "pmcro_provides": "planner"},
+    {"name": "maker", "version": "1.0.0", "pmcro_provides": "maker"},
+    {"name": "checker", "version": "1.0.0", "pmcro_provides": "checker"},
+    {"name": "reflector", "version": "1.0.0", "pmcro_provides": "reflector"}
+  ],
+  "domain_scope_path": "catalog/Tools/AI-Company/skills/cto/",
+  "resolved_at": "2026-07-19T00:00:00Z"
+}
