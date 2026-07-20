@@ -1,0 +1,7 @@
+{
+  "trail_id": "a67f85ba-8e88-4c0f-ae74-dff0636a22dc",
+  "domain": "ceo",
+  "true_intent": "/ceo:approve-initiative against ceo/fe7be6ff-bb92-48a9-ac93-c7ed686e2161: confirm which domains are affected by the Colony Constitution and Linguistic Chain of Custody change, whether their Owns/Does-Not-Own boundaries are respected, and produce an explicit approve/reject/needs-revision disposition.",
+  "created_at": "2026-07-19T00:00:00Z",
+  "requested_by": "/ceo:approve-initiative"
+}

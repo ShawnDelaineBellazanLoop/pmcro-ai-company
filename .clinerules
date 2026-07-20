@@ -1,9 +1,10 @@
 # Colony Constitution
 
-Status: staged, `needs-approval` -- see
-`.pmcro/trails/ceo/fe7be6ff-bb92-48a9-ac93-c7ed686e2161/disposition.json`.
-Not yet ratified. Do not treat as binding until `/ceo:approve-initiative`
-accepts it.
+Status: **ratified**, approved via `/ceo:approve-initiative`
+(`.pmcro/trails/ceo/a67f85ba-8e88-4c0f-ae74-dff0636a22dc`, disposition:
+`accept`), superseding the `staged, needs-approval` status this file
+carried at creation in `ceo/fe7be6ff-bb92-48a9-ac93-c7ed686e2161`. Binding
+as of this ratification.
 
 ## What This File Is (and Is Not)
 
@@ -76,6 +77,7 @@ strength of its own say-so. `progress.md` entries require a trail with an
 
 ## Ratification
 
-This Constitution takes effect only once its own trail
-(`ceo/fe7be6ff-bb92-48a9-ac93-c7ed686e2161`) is approved via
-`/ceo:approve-initiative` -- it cannot self-ratify, per Article 2.
+This Constitution was ratified via `/ceo:approve-initiative`, trail
+`ceo/a67f85ba-8e88-4c0f-ae74-dff0636a22dc`. It could not self-ratify
+(Article 2) -- the approval was a separate, explicit human-directed cycle,
+not this trail waiving its own gate.
