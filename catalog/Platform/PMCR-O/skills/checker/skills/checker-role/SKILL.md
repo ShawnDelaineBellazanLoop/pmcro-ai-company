@@ -50,6 +50,13 @@ make: <path to NN-make.jsonl>
 5. **HIL-boundary conformance** -- confirm any TYPE1 action Maker took had
    the gate `../../../orchestrator/references/hil-gating.md` requires, not
    just a plan step authorizing it.
+6. **Catalog-Consistency** -- if the cycle touched `.claude-plugin/marketplace.json`
+   or `.agents/plugins/marketplace.json`, confirm both marketplace twins
+   agree on plugin roster, `version`, and `displayName` per entry, and on
+   the top-level `description`. A cycle that updates one twin and not the
+   other is a finding against whichever role made the write, not a pass
+   with a note -- this is EC-010's grep-verified-repo-wide principle
+   applied specifically to the marketplace twins.
 
 Write `<cycle_number>-check.jsonl` with one entry per finding: which check,
 pass/fail, and for failures, the specific evidence (not "seems off").

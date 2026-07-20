@@ -7,57 +7,133 @@
   "interface": {
     "displayName": "PMCR-O AI Agent Company"
   },
-  "description": "PMCR-O AI Agent Company C-Suite directory -- 10 domain-scope plugins (CEO, Chief of Staff, CTO, COO, CFO, CRO, CMO, CLO, CHRO, Domain Specialist) built to the dotnet-agent-skills convention. Each domain is documentation-only scope, consulted by pmcro-loop (in pmcro-skills) when a cycle's true_intent falls under it -- no domain reimplements the PMCR-O loop itself.",
+  "description": "PMCR-O AI Agent Company C-Suite directory -- 10 domain-scope plugins (CEO, Chief of Staff, CTO, COO, CFO, CRO, CMO, CLO, CHRO, Domain Specialist) built to the dotnet-agent-skills convention. Each domain is documentation-only scope, consulted by pmcro-loop when a cycle's true_intent falls under it -- no domain reimplements the PMCR-O loop itself.",
   "plugins": [
     {
       "name": "ceo",
       "source": "./catalog/Tools/AI-Company/skills/ceo",
-      "description": "Chief Executive domain -- strategic direction, OKRs, compute allocation, agent routing. Root node of the Colony."
+      "description": "Chief Executive domain -- strategic direction, OKRs, compute allocation, agent routing. Root node of the Colony.",
+      "category": "executive",
+      "displayName": "Chief Executive Officer"
     },
     {
       "name": "chief-of-staff",
       "source": "./catalog/Tools/AI-Company/skills/chief-of-staff",
-      "description": "Chief of Staff domain -- priority triage, cross-agent coordination, brief writing."
+      "description": "Chief of Staff domain -- priority triage, cross-agent coordination, brief writing.",
+      "category": "staff",
+      "displayName": "Chief of Staff"
     },
     {
       "name": "cto",
       "source": "./catalog/Tools/AI-Company/skills/cto",
-      "description": "Chief Technology domain -- architecture, skill pack validation, security posture, DevOps, incident response."
+      "description": "Chief Technology domain -- architecture, skill pack validation, security posture, DevOps, incident response.",
+      "category": "executive",
+      "displayName": "Chief Technology Officer"
     },
     {
       "name": "coo",
       "source": "./catalog/Tools/AI-Company/skills/coo",
-      "description": "Chief Operations domain -- SOPs, workflow automation, vendor/compliance management, resource allocation, KPI dashboards."
+      "description": "Chief Operations domain -- SOPs, workflow automation, vendor/compliance management, resource allocation, KPI dashboards.",
+      "category": "executive",
+      "displayName": "Chief Operations Officer"
     },
     {
       "name": "cfo",
       "source": "./catalog/Tools/AI-Company/skills/cfo",
-      "description": "Chief Financial domain -- budgeting, cash flow, forecasting, cost optimization, investor reporting."
+      "description": "Chief Financial domain -- budgeting, cash flow, forecasting, cost optimization, investor reporting.",
+      "category": "executive",
+      "displayName": "Chief Financial Officer"
     },
     {
       "name": "cro",
       "source": "./catalog/Tools/AI-Company/skills/cro",
-      "description": "Chief Revenue domain -- lead generation, CRM automation, proposal writing, pipeline management, deal closing."
+      "description": "Chief Revenue domain -- lead generation, CRM automation, proposal writing, pipeline management, deal closing.",
+      "category": "executive",
+      "displayName": "Chief Revenue Officer"
     },
     {
       "name": "cmo",
       "source": "./catalog/Tools/AI-Company/skills/cmo",
-      "description": "Chief Marketing domain -- content creation, SEO, social media, campaign management, brand voice."
+      "description": "Chief Marketing domain -- content creation, SEO, social media, campaign management, brand voice.",
+      "category": "executive",
+      "displayName": "Chief Marketing Officer"
     },
     {
       "name": "clo",
       "source": "./catalog/Tools/AI-Company/skills/clo",
-      "description": "Chief Legal domain -- contract review, risk analysis, regulatory compliance, privacy, IP protection."
+      "description": "Chief Legal domain -- contract review, risk analysis, regulatory compliance, privacy, IP protection.",
+      "category": "executive",
+      "displayName": "Chief Legal Officer"
     },
     {
       "name": "chro",
       "source": "./catalog/Tools/AI-Company/skills/chro",
-      "description": "Chief People domain -- hiring pipelines, onboarding, performance reviews, culture docs, training design."
+      "description": "Chief People domain -- hiring pipelines, onboarding, performance reviews, culture docs, training design.",
+      "category": "executive",
+      "displayName": "Chief People Officer"
     },
     {
       "name": "domain-specialist",
       "source": "./catalog/Tools/AI-Company/skills/domain-specialist",
-      "description": "Industry specialist -- Property Preservation / Real Estate (Tooensure Recovery Services). Reports to coo."
+      "description": "Industry specialist -- Property Preservation / Real Estate (Tooensure Recovery Services). Reports to coo.",
+      "category": "domain",
+      "displayName": "Domain Specialist (Property Preservation)"
+    },
+    {
+      "name": "orchestrator",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/orchestrator",
+      "description": "The Orchestrate role of the PMCR-O loop -- owns sequencing, loop-vs-seal, and EC-009 MaxLoops enforcement. Provides: orchestrator. Requires: planner, maker, checker, reflector, dependency-resolver.",
+      "category": "engine",
+      "displayName": "Orchestrator (PMCR-O Loop)"
+    },
+    {
+      "name": "dependency-resolver",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/dependency-resolver",
+      "description": "Resolves which domain scope and PMCR-O role-skills a cycle needs via metadata.pmcro_provides/pmcro_requires. Provides: dependency-resolver.",
+      "category": "engine",
+      "displayName": "Dependency Resolver"
+    },
+    {
+      "name": "planner",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/planner",
+      "description": "The Plan role of the PMCR-O loop -- passive, composable. Provides: planner.",
+      "category": "engine",
+      "displayName": "Planner (PMCR-O Loop)"
+    },
+    {
+      "name": "maker",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/maker",
+      "description": "The Make role of the PMCR-O loop -- passive, composable. Provides: maker.",
+      "category": "engine",
+      "displayName": "Maker (PMCR-O Loop)"
+    },
+    {
+      "name": "checker",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/checker",
+      "description": "The Check role of the PMCR-O loop -- passive, composable. Provides: checker.",
+      "category": "engine",
+      "displayName": "Checker (PMCR-O Loop)"
+    },
+    {
+      "name": "reflector",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/reflector",
+      "description": "The Reflect role of the PMCR-O loop -- crystallizes EarnedConstraints. Provides: reflector.",
+      "category": "engine",
+      "displayName": "Reflector (PMCR-O Loop)"
+    },
+    {
+      "name": "skill-creator",
+      "version": "1.0.0",
+      "source": "./catalog/Platform/PMCR-O/skills/skill-creator",
+      "description": "Packages new commands/agents/domains/role-skills into this repo's convention and syncs the catalog. Provides: skill-creator. Requires: dependency-resolver.",
+      "category": "engine",
+      "displayName": "Skill Creator (Colony Packaging)"
     }
   ]
 }

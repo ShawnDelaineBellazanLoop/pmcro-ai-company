@@ -876,7 +876,7 @@ description: "$($c.description)"
     ($pj | ConvertTo-Json -Depth 10) | Out-String | ForEach-Object { Write-Utf8NoBom $pluginJsonPath $_.TrimEnd() }
 }
 
-# --- 5. Add displayName to marketplace.json entries ---
+# --- 5. Add displayName to marketplace.json entries (both twins) ---
 $marketplacePath = "W:\pmcro-ai-company\.claude-plugin\marketplace.json"
 $mkt = Get-Content -Raw -Path $marketplacePath | ConvertFrom-Json
 foreach ($plugin in $mkt.plugins) {
@@ -886,5 +886,17 @@ foreach ($plugin in $mkt.plugins) {
     }
 }
 ($mkt | ConvertTo-Json -Depth 10) | Out-String | ForEach-Object { Write-Utf8NoBom $marketplacePath $_.TrimEnd() }
+
+$agentsMarketplacePath = "W:\pmcro-ai-company\.agents\plugins\marketplace.json"
+if (Test-Path $agentsMarketplacePath) {
+    $agentsMkt = Get-Content -Raw -Path $agentsMarketplacePath | ConvertFrom-Json
+    foreach ($plugin in $agentsMkt.plugins) {
+        $match = $domains | Where-Object { $_.id -eq $plugin.name }
+        if ($match) {
+            $plugin | Add-Member -NotePropertyName "displayName" -NotePropertyValue $match.displayName -Force
+        }
+    }
+    ($agentsMkt | ConvertTo-Json -Depth 10) | Out-String | ForEach-Object { Write-Utf8NoBom $agentsMarketplacePath $_.TrimEnd() }
+}
 
 Write-Output "DONE: $($domains.Count) domains, $totalAgents agents, $totalCommands commands scaffolded."

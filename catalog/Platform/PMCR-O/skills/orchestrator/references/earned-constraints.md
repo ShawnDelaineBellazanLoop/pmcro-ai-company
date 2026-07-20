@@ -29,6 +29,18 @@ seed directly rather than wait for a pattern to repeat:
   or claiming it. Carried forward from the earlier `pmcro-cline` project's
   operating discipline. `checker` treats a claim about state that wasn't
   verified against the actual target as a finding, not a pass.
+- **EC-011**: The two marketplace twins (`.claude-plugin/marketplace.json`
+  and `.agents/plugins/marketplace.json`) must be written in the same pass
+  and must never drift on plugin roster, `version`, `displayName`, or the
+  top-level `description`. Seeded directly rather than waiting for 3+
+  recurrences -- the discovery that justified it was already the evidence:
+  `.agents/plugins/marketplace.json` was found missing all 7 platform-tier
+  entries, missing `displayName`/`category` on every entry, and carrying a
+  stale `(in pmcro-skills)` reference the primary twin had already had
+  removed, from a prior session that only ever wrote the primary file.
+  `checker` enforces this at Rule 6 (Catalog-Consistency); `orchestrator`
+  and `scaffold-csuite.ps1` write both twins in the same pass going
+  forward, never one without the other.
 
 ## Adding a New EC (reflector's job)
 
