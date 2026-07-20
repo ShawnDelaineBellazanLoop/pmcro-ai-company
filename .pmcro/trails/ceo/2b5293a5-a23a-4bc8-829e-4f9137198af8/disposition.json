@@ -1,0 +1,9 @@
+{
+  "trail_id": "2b5293a5-a23a-4bc8-829e-4f9137198af8",
+  "sealed_at": "2026-07-19T00:00:00Z",
+  "final_cycle": "01",
+  "disposition": "needs-revision",
+  "reason": "Dangling cycle: created 2026-07-20T01:29:55Z with the same true_intent as trail ceo/e5a18a66-6a0e-4de0-9ce7-16c49f63782c (apply both proposals staged in ceo/e5e3107f-17d3-4260-abca-06b3efec5c57 -- dependency-resolver hardening / 00-deps.json artifact, and EC-010). This cycle only reached 01-plan.jsonl; no make, check, reflect, or disposition was ever produced, and dispatch appears to have been duplicated rather than resumed. The same initiative was independently completed and sealed accept in ceo/e5a18a66-6a0e-4de0-9ce7-16c49f63782c at 2026-07-20T01:52:00Z, which applied trail-schema.md, orchestrator-role/SKILL.md, checker-role/SKILL.md, and earned-constraints.md (EC-010) as planned here. Sealing needs-revision rather than accept/reject: this trail's own work product never completed, so it cannot be judged on its merits, but no revision is actually required going forward since e5a18a66 already delivered the intended outcome. Superseded, not retried.",
+  "superseded_by": "ceo/e5a18a66-6a0e-4de0-9ce7-16c49f63782c",
+  "sealed_by": "cto (per /orchestrator:run-cycle audit request)"
+}

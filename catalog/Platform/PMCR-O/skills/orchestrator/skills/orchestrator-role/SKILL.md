@@ -11,7 +11,7 @@ compatibility: "No external runtime dependency. Composes the four passive role-s
 
 The Orchestrate role of the PMCR-O loop, and the one skill in this Colony
 allowed to contain sequencing logic. Per Law 2
-(`../../../../../../../.agents/rules/02-pmcro-cycle-discipline.md`), every
+(`<repo_path>/.agents/rules/02-pmcro-cycle-discipline.md`), every
 domain-scoped cycle runs the full Plan -> Make -> Check -> Reflect sequence
 before this skill decides loop-vs-seal. No domain or command skips a role,
 regardless of how obvious the fix seems.
@@ -26,16 +26,21 @@ that came from somewhere other than this exact loop. If sequencing were
 smeared across all five roles, none of them would compose. This skill is
 where "what runs next" lives, full stop.
 
-## Invocation Contract
+## Usage (System Contract)
 
-A caller (always a domain command, e.g. `/ceo:approve-initiative`) invokes
-this skill with:
+A caller (always a domain command, e.g. `/ceo:approve-initiative`, or
+`/orchestrator:run-cycle` directly) invokes this skill with:
 
 ```
 domain: <one of the 10 C-Suite domains>
 true_intent: <free-text description of the cycle's goal>
 repo_path: <resolved per Law 1, .agents/rules/01-declarative-params.md>
 ```
+
+This matches `commands/run-cycle.md`'s own parameter block exactly --
+`run-cycle` is the dispatcher every domain command calls through, so its
+output shape is this skill's input contract by construction. Keep the two
+in sync if either ever changes.
 
 ## The Cycle
 
@@ -111,11 +116,12 @@ respects EC-009's cap.
 
 ## Reference Files
 
-- `../../references/trail-schema.md` -- exact frame/trail file formats and
-  directory layout
-- `../../references/earned-constraints.md` -- EC-XXX registry format,
-  EC-009 definition, how to add a new constraint
-- `../../references/ralph-loop-mechanics.md` -- bounded multi-turn iteration
-  for cycles too large for one pass
-- `../../references/hil-gating.md` -- TYPE1/TYPE2 tool boundary, which
-  disposition a cycle is allowed to self-seal with
+- `catalog/Platform/PMCR-O/skills/orchestrator/references/trail-schema.md`
+  -- exact frame/trail file formats and directory layout
+- `catalog/Platform/PMCR-O/skills/orchestrator/references/earned-constraints.md`
+  -- EC-XXX registry format, EC-009 definition, how to add a new constraint
+- `catalog/Platform/PMCR-O/skills/orchestrator/references/ralph-loop-mechanics.md`
+  -- bounded multi-turn iteration for cycles too large for one pass
+- `catalog/Platform/PMCR-O/skills/orchestrator/references/hil-gating.md`
+  -- TYPE1/TYPE2 tool boundary, which disposition a cycle is allowed to
+  self-seal with

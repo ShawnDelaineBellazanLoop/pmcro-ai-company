@@ -41,6 +41,19 @@ seed directly rather than wait for a pattern to repeat:
   `checker` enforces this at Rule 6 (Catalog-Consistency); `orchestrator`
   and `scaffold-csuite.ps1` write both twins in the same pass going
   forward, never one without the other.
+- **EC-012**: `checker`'s Rule 3 (Dependency-resolution-recorded, i.e. a
+  valid `00-deps.json` at the trail root) applies only to trails opened at
+  or after `00-deps.json`'s introduction (2026-07-20T01:52:00Z, trail
+  `ceo/e5a18a66-6a0e-4de0-9ce7-16c49f63782c`). It is not retroactive:
+  sealed trails are immutable per `trail-schema.md`, so a trail sealed
+  before that timestamp is never backfilled with a `00-deps.json` it was
+  never required to have, and a pre-existing dangling trail sealed
+  `needs-revision` after the fact is not a Rule 3 failure either. Seeded
+  directly, human-approved, rather than waiting for 3+ recurrences -- a
+  routine marketplace-parity audit (2026-07-19) found all 3 then-existing
+  trails lacking `00-deps.json`, including the trail that introduced the
+  requirement itself; that discovery was the evidence, same pattern as
+  EC-011.
 
 ## Adding a New EC (reflector's job)
 

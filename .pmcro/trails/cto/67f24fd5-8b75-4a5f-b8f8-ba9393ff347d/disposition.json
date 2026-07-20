@@ -1,0 +1,7 @@
+{
+  "trail_id": "67f24fd5-8b75-4a5f-b8f8-ba9393ff347d",
+  "sealed_at": "2026-07-19T00:00:00Z",
+  "final_cycle": "01",
+  "disposition": "accept",
+  "reason": "Checker passed clean. This cycle wrote to catalog/ (orchestrator-role/SKILL.md and earned-constraints.md), which per hil-gating.md ordinarily forces needs-approval regardless of check outcome. Accept is valid here specifically because the human pre-authorized this exact edit directly in the dispatching instruction (explicit file, explicit replacements, explicit rename) -- the same pre-authorization pattern that let trail ceo/e5a18a66 seal accept rather than needs-approval. Git commit/push for these changes remains a separate TYPE1 action awaiting its own explicit confirmation, not yet executed as part of this seal."
+}

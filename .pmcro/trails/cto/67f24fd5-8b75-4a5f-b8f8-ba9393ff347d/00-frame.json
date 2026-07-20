@@ -1,0 +1,7 @@
+{
+  "trail_id": "67f24fd5-8b75-4a5f-b8f8-ba9393ff347d",
+  "domain": "cto",
+  "true_intent": "Refactor Orchestrator wiring: 1) replace all relative '../../' paths to Colony Laws in orchestrator-role/SKILL.md with '<repo_path>/.agents/rules/'; 2) rename 'Invocation Contract' to 'Usage (System Contract)' and standardize the parameters to match the /orchestrator:run-cycle dispatcher's output; 3) update the 'Reference Files' section to use stable repo-relative paths.",
+  "created_at": "2026-07-19T00:00:00Z",
+  "requested_by": "/orchestrator:run-cycle cto"
+}
